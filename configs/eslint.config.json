@@ -1,0 +1,36 @@
+{
+  "rules": {
+    "indent": [
+      2
+    ],
+    "quotes": [
+      2,
+      "single"
+    ],
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "semi": [
+      2,
+      "always"
+    ],
+    "no-unused-vars": 1,
+    "import/extensions": [
+      2,
+      {
+        "js": "ignorePackages"
+      }
+    ]
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "plugins": [
+  ],
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base"
+  ]
+}

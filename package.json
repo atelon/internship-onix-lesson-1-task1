@@ -1,0 +1,38 @@
+{
+	"name": "task-1",
+	"version": "0.0.1",
+	"description": "The package displays the sum of the largest and smallest digit of entered number using only operations on numbers",
+	"private": true,
+	"dependencies": {},
+	"devDependencies": {
+		"@babel/core": "^7.12.3",
+		"@babel/preset-env": "^7.12.1",
+		"babel-jest": "^26.6.3",
+		"cross-env": "^7.0.2",
+		"eslint": "^7.2.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jest": "^24.1.3",
+		"jest": "^26.6.3",
+		"npm-run-all": "^4.1.5",
+		"webpack": "^5.5.1",
+		"webpack-bundle-analyzer": "^4.1.0",
+		"webpack-cli": "^4.2.0"
+	},
+	"scripts": {
+		"start": "node dist/index.min.js",
+		"dev": "node dist/index.js",
+		"build-dev": "cross-env NODE_ENV=development webpack --config ./configs/webpack.config.js --color",
+		"build-production": "cross-env NODE_ENV=production webpack --config ./configs/webpack.config.js --color",
+		"test-code": "jest --notify --config=./configs/jest.config.js --roots=./../",
+		"test-style": "npm-run-all test-style:*",
+		"test-style:eslint-main": "eslint -c configs/eslint.config.json src/*.js",
+		"test-style:eslint-tests": "eslint -c configs/eslint.test.config.json tests/*.js",
+		"analyze-dev": "webpack-bundle-analyzer ./dist/stats.json"
+	},
+	"engines": {
+		"node": ">=14.10.1"
+	},
+	"author": "atelon",
+	"license": "MIT"
+}
